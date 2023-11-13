@@ -13,4 +13,12 @@
         android:layout_height="match_parent"
         android:text="@string/app_name"
         android:textSize="25dp"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" irtagnaklgnksl;ng"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="103dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
