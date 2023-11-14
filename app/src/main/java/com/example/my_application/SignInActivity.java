@@ -52,7 +52,7 @@ public class SignInActivity extends AppCompatActivity {
            binding.textCreateNewAccount.setOnClickListener(v ->
                    startActivity(new Intent(getApplicationContext(),SignUpActivity.class)));
 
-       loginButton.setOnClickListener(new View.OnClickListener() {
+      binding.loginButton.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                perforLogin();
@@ -67,7 +67,7 @@ public class SignInActivity extends AppCompatActivity {
         String password = inputPassword.getText().toString();
 
 
-        if (email.matches(emailPattern)) {
+        if (!email.matches(emailPattern)) {
             inputEmail.setError("Enter Connext Email");
         } else if (password.isEmpty() || password.length() < 6) {
             inputPassword.setError("Enter Proper Password ");
@@ -94,7 +94,7 @@ public class SignInActivity extends AppCompatActivity {
             });
         }
     } private void sendUserToNextActivity() {
-        Intent intent = new Intent(SignInActivity.this,Page1Activity.class);
+        Intent intent = new Intent(SignInActivity.this,MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }

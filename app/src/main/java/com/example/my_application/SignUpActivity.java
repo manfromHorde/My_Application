@@ -96,7 +96,7 @@ if (task.isSuccessful()){
     }
 
     private void sendUserToNextActivity() {
-        Intent intent = new Intent(SignUpActivity.this,Page1Activity.class);
+        Intent intent = new Intent(SignUpActivity.this,MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
